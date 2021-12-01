@@ -32,15 +32,23 @@ $query_cadastros = mysqli_query($connx,$buscar_cadastros);
             while($receber_cadastros = mysqli_fetch_array($query_cadastros)){
                 $nome = $receber_cadastros['nome'];
                 $telefone = $receber_cadastros['telefone'];
+                $id = $receber_cadastros['id'];
               
             ?>
             <tr>
-                <td scope="row"><?php echo $nome;?></td>
-                <td><?php echo $telefone;?></td>
+                <td scope="row"><?php echo $id;?></td>
+                <td><input type="text" name="nome" value="<?php echo $nome;?>"></td>
+                <td><input type="text" name="telefone" value="<?php echo $telefone;?>"></td>
+
                 <td>
                   <form action="excluir.php" method="post">
-                  <input type="text" name="nome" value="<?php echo $nome;?>">
+                  <input type="hidden" name="nome" value="<?php echo $nome;?>">
                   <input type="submit" value="Excluir">
+                  </form></td>
+
+                  <td>
+                  <form action="editar.php" method="post">
+                  <input type="submit" value="Alterar">
                   </form></td>
                
             </tr>
