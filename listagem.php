@@ -1,7 +1,7 @@
 <?php
 include 'conexao.php';// chama conexao
-$buscar_cadastros= " SELECT * FROM cliente";// passa o q quer fazer
-$query_cadastros = mysqli_query($connx,$buscar_cadastros);//transforma os dados
+$buscar_cadastros= " SELECT * FROM cliente";
+$query_cadastros = mysqli_query($connx,$buscar_cadastros);
 
 
 ?>
