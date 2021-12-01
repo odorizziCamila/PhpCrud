@@ -37,6 +37,11 @@ $query_cadastros = mysqli_query($connx,$buscar_cadastros);
             <tr>
                 <td scope="row"><?php echo $nome;?></td>
                 <td><?php echo $telefone;?></td>
+                <td>
+                  <form action="excluir.php" method="post">
+                  <input type="text" name="nome" value="<?php echo $nome;?>">
+                  <input type="submit" value="Excluir">
+                  </form></td>
                
             </tr>
             <?php }; ?>
